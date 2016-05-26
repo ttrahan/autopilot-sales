@@ -4,7 +4,7 @@ var os = require('os');
 
 var app = express();
 var upstreamHosts = [];
-var consulDNS = process.env.consulDNS; // 'consul.svc.b71934f2-d224-cd47-fd4b-ef25fd4ee85f.us-east-1.triton.zone';
+var consulDNS = 'consul.svc.b71934f2-d224-cd47-fd4b-ef25fd4ee85f.us-east-1.triton.zone';
 
 // the data contains the hostname so that we can see upstreams change
 // in the demonstration app
