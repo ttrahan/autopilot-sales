@@ -22,7 +22,7 @@ var getUpstreams = function(force, callback) {
         callback(upstreamHosts);
     } else {
         http.get({
-            host: consulDNS,
+            host: 'consul.svc.b71934f2-d224-cd47-fd4b-ef25fd4ee85f.us-east-1.triton.zone',
             port: 8500,
             path: '/v1/catalog/service/customers'
         }, function(response) {
