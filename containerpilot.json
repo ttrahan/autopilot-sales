@@ -14,16 +14,6 @@
       "name": "customers",
       "poll": 3,
       "onChange": "pkill -SIGHUP node"
-    },
-    {
-      "name": "mysql",
-      "poll": 5,
-      "onChange": "pkill -SIGHUP node"
-    },
-    {
-      "name": "mysql-primary",
-      "poll": 5,
-      "onChange": "pkill -SIGHUP node"
     }
   ]
 }
