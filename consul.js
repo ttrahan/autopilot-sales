@@ -6,7 +6,7 @@ var CONSUL_DNS = 'consul.svc.b71934f2-d224-cd47-fd4b-ef25fd4ee85f.us-east-1.trit
 // query Consul for the upstream services
 exports.getUpstreams = function(service, callback) {
   http.get({
-    host: 'consul.svc.b71934f2-d224-cd47-fd4b-ef25fd4ee85f.us-east-1.triton.zone',
+    host: CONSUL_DNS,
     port: 8500,
     path: '/v1/catalog/service/' + service
   }, function(response) {

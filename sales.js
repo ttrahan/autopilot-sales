@@ -24,7 +24,8 @@ var getUpstreams = function(force, callback) {
         http.get({
             host: 'consul.svc.b71934f2-d224-cd47-fd4b-ef25fd4ee85f.us-east-1.triton.zone',
             port: 8500,
-            path: '/v1/catalog/service/customers'
+            path: '/v1/health/service/customers?passing'
+            // path: '/v1/catalog/service/customers'
         }, function(response) {
             var body = '';
             response.on('data', function(d) { body += d; });
@@ -32,8 +33,8 @@ var getUpstreams = function(force, callback) {
                 var parsed = JSON.parse(body);
                 hosts = []
                 for (var i = 0; i < parsed.length; i++) {
-                    hosts.push({address: parsed[i].ServiceAddress,
-                                port: parsed[i].ServicePort});
+                    hosts.push({address: parsed[i].Service.Address,
+                                port: parsed[i].Service.Port});
                 }
                 upstreamHosts = hosts; // cache the result
                 callback(hosts);
