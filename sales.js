@@ -13,7 +13,8 @@ var data = {
     "Alice": {"phone": "555-1234", "client": "ACME Corporation", "source": sourceName},
     "Bob": {"phone": "555-2341", "client": "Vandelay Industries", "source": sourceName},
     "Carol": {"phone": "555-3412", "client": "Hooli", "source": sourceName},
-    "Dave": {"phone": "555-4123", "client": "Initech", "source": sourceName}
+    "Dave": {"phone": "555-4123", "client": "Initech", "source": sourceName},
+    "Tom": {"phone": "555-9999", "client": "SpinalTap", "source": sourceName}
 };
 
 // query Consul for the upstream services
